@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { ActivityIndicator, AppRegistry, Text, View } from 'react-native';
 import { StyleProvider} from 'native-base';
 
 import 'intl';
@@ -50,8 +50,8 @@ export default class ParvestAqua extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <View style={{flex: 1, paddingTop: 20}}>
-          <Text>Waiting ...</Text>
+        <View style={{flex: 1, paddingTop: 20, justifyContent: 'center'}}>
+          <ActivityIndicator />
         </View>
       );
     }
