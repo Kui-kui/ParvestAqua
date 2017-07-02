@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Image,
-  Text,
-  View
-} from 'react-native';
+import { View } from 'react-native';
 
-import styles from './styles.js'
+import Overview from './Overview'
+import Performances from './Performances'
 
 export default class Fundsheet extends Component {
+
+  _renderTab = () => {
+    switch (this.props.getActiveTab()) {
+      case 'performances':
+        return <Performances dataSource={this.props.dataSource} />;
+      default:
+        return <Overview dataSource={this.props.dataSource} />;
+    }
+  }
+
   render() {
-    return (
-      <View>
-        <Text>Coucou</Text>
-        <Text>{this.props.getActiveTab()}</Text>
-      </View>
-    );
+    return <View>{this._renderTab()}</View>;
   }
 }

@@ -18,28 +18,28 @@ export default class FooterTabsExample extends Component {
             <Icon name="home" />
           </Button>
           <Button
-            active={this.props.isTabActive('stats')}
-            onPress={() => this.props.activateTab('stats')} >
+            active={this.props.isTabActive('performances')}
+            onPress={() => this.props.activateTab('performances')} >
             <Icon name="stats" />
           </Button>
           <Button
-            active={this.props.isTabActive('card')}
-            onPress={() => this.props.activateTab('card')} >
+            active={this.props.isTabActive('navs')}
+            onPress={() => this.props.activateTab('navs')} >
             <Icon name="card" />
           </Button>
           <Button
-            active={this.props.isTabActive('pie')}
-            onPress={() => this.props.activateTab('pie')} >
+            active={this.props.isTabActive('commissions')}
+            onPress={() => this.props.activateTab('commissions')} >
             <Icon name="pie" />
           </Button>
           <Button
-            active={this.props.isTabActive('list')}
-            onPress={() => this.props.activateTab('list')} >
+            active={this.props.isTabActive('caracteristics')}
+            onPress={() => this.props.activateTab('caracteristics')} >
             <Icon name="list" />
           </Button>
           <Button
-            active={this.props.isTabActive('paper')}
-            onPress={() => this.props.activateTab('paper')} >
+            active={this.props.isTabActive('documents')}
+            onPress={() => this.props.activateTab('documents')} >
             <Icon name="paper" />
           </Button>
         </FooterTab>

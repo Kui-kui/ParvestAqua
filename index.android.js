@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
-import { Container, Body} from 'native-base';
 
 import AppContainer from './src/components/AppContainer'
 
@@ -36,7 +35,7 @@ export default class ParvestAqua extends Component {
     }
 
     return (
-      <AppContainer />
+      <AppContainer dataSource={this.state.dataSource} />
     );
   }
 }

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Image,
-  Text,
-  View
-} from 'react-native';
+
 import { Container, Body} from 'native-base';
 
 import Fundsheet from './Fundsheet/Fundsheet';
@@ -39,7 +34,7 @@ export default class AppContainer extends Component {
         <ParvestHeader />
         <Body>
           <Fundsheet
-            dataSource={this.state.dataSource}
+            dataSource={this.props.dataSource}
             getActiveTab={this._getActiveTab.bind(this)} />
         </Body>
         <FooterTabsExample
