@@ -5,12 +5,19 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '90%',
   },
+  headerTitle: {
+    color: '#fff',
+    fontFamily: 'BNPPSans',
+    fontSize: 26,
+  },
   title: {
+    fontFamily: 'BNPPSans',
     fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   subtitle: {
+    fontFamily: 'BNPPSans',
     fontWeight: 'bold',
   },
   keyNumbersGrid: {
@@ -24,10 +31,12 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   keyNumbersText: {
+    fontFamily: 'BNPPSans',
     color: '#fff',
     textAlign: 'center',
   },
   keyNumbersTitle: {
+    fontFamily: 'BNPPSans',
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
