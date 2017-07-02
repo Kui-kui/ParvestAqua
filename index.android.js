@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
+import { Container, Body} from 'native-base';
 
-import Fundsheet from './src/components/Fundsheet/Fundsheet';
-import ParvestHeader from './src/components/Fundsheet/ParvestHeader'
+import AppContainer from './src/components/AppContainer'
 
 export default class ParvestAqua extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: true,
     }
   }
 
@@ -36,9 +36,7 @@ export default class ParvestAqua extends Component {
     }
 
     return (
-      <View>
-        <ParvestHeader />
-      </View>
+      <AppContainer />
     );
   }
 }

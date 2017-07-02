@@ -3095,10 +3095,6 @@ react-devtools-core@^2.1.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-collapsible-header@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/react-native-collapsible-header/-/react-native-collapsible-header-0.0.11.tgz#80b8cda2de174a0f67ef0f88adcdc44440b0768a"
-
 react-native-drawer@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-native-drawer/-/react-native-drawer-2.3.0.tgz#a0369ec80ff0b61c9f152dbdea91fe76c843113a"
@@ -3117,11 +3113,13 @@ react-native-keyboard-aware-scroll-view@0.2.9:
   dependencies:
     react-timer-mixin "^0.13.3"
 
-react-native-tab-view@^0.0.66:
-  version "0.0.66"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.66.tgz#681a91bf0e714de92bbd5255839fc096fcff4bb5"
+react-native-vector-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.2.0.tgz#0594b68debdd758dce4c565bf02e2d64d7004d82"
   dependencies:
+    lodash "^4.0.0"
     prop-types "^15.5.8"
+    yargs "^6.3.0"
 
 react-native-vector-icons@~4.1.1:
   version "4.1.1"
