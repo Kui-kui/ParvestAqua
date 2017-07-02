@@ -7,10 +7,9 @@ export default class ParvestHeader extends Component {
     return (
       <Header
         backgroundColor='#00965e'
-        androidStatusBarColor='#00965e'
-      >
+        androidStatusBarColor='#00965e' >
         <Body>
-          <Title>PARVEST AQUA</Title>
+          <Title>{this.props.fundName}</Title>
         </Body>
       </Header>
     );

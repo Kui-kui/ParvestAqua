@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Body} from 'native-base';
+import { Container, Content} from 'native-base';
 
 import Fundsheet from './Fundsheet/Fundsheet';
 import ParvestHeader from './Fundsheet/ParvestHeader'
@@ -31,12 +31,12 @@ export default class AppContainer extends Component {
   render() {
     return (
       <Container>
-        <ParvestHeader />
-        <Body>
+        <ParvestHeader fundName={this.props.dataSource.header.name}/>
+        <Content>
           <Fundsheet
             dataSource={this.props.dataSource}
             getActiveTab={this._getActiveTab.bind(this)} />
-        </Body>
+        </Content>
         <FooterTabsExample
           activateTab={this._activateTab.bind(this)}
           isTabActive={this._isTabActive.bind(this)} />

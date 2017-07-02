@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
+import 'intl';
+import 'intl/locale-data/jsonp/fr.js';
+import fr from 'react-intl/locale-data/fr'
+import { addLocaleData, IntlProvider } from 'react-intl'
+
 import AppContainer from './src/components/AppContainer'
 
 export default class ParvestAqua extends Component {
@@ -8,7 +13,22 @@ export default class ParvestAqua extends Component {
     super(props);
     this.state = {
       isLoading: true,
-    }
+      dataSource: null
+    };
+    addLocaleData([...fr]);
+  }
+
+  componentWillMount () {
+    fetch('https://www.bnpparibas-am.fr/translation/locale/fr_FR')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({
+          translations: responseJson
+        })
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   componentDidMount() {
@@ -35,7 +55,9 @@ export default class ParvestAqua extends Component {
     }
 
     return (
-      <AppContainer dataSource={this.state.dataSource} />
+      <IntlProvider locale='fr-FR' messages={this.state.translations}>
+        <AppContainer dataSource={this.state.dataSource} />
+      </IntlProvider>
     );
   }
 }
