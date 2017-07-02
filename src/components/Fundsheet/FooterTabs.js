@@ -10,7 +10,7 @@ export default class FooterTabsExample extends Component {
   };
   render() {
     return (
-      <Footer >
+      <Footer>
         <FooterTab>
           <Button
             active={this.props.isTabActive('home')}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
+import { StyleProvider} from 'native-base';
 
 import 'intl';
 import 'intl/locale-data/jsonp/fr.js';
@@ -7,6 +8,7 @@ import fr from 'react-intl/locale-data/fr'
 import { addLocaleData, IntlProvider } from 'react-intl'
 
 import AppContainer from './src/components/AppContainer'
+import getTheme from './native-base-theme/components';
 
 export default class ParvestAqua extends Component {
   constructor(props) {
@@ -56,7 +58,9 @@ export default class ParvestAqua extends Component {
 
     return (
       <IntlProvider locale='fr-FR' messages={this.state.translations}>
-        <AppContainer dataSource={this.state.dataSource} />
+        <StyleProvider style={getTheme()}>
+          <AppContainer dataSource={this.state.dataSource} />
+        </StyleProvider>
       </IntlProvider>
     );
   }
