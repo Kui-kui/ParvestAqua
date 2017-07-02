@@ -20,26 +20,30 @@ const styles = StyleSheet.create({
     fontFamily: 'BNPPSans',
     fontWeight: 'bold',
   },
-  keyNumbersGrid: {
-    padding: 10
+  grid: {
+    paddingLeft: 10,
+    paddingRight: 10,
   },
-  keyNumbersBlock: {
+  block: {
     backgroundColor: '#7fb4ba',
     borderRadius: 1,
     height: 100,
     margin: 2,
-    padding: 5,
+    paddingTop: 10,
+    paddingRight: 5,
+    paddingLeft: 5,
   },
-  keyNumbersText: {
+  blockText: {
     fontFamily: 'BNPPSans',
     color: '#fff',
     textAlign: 'center',
   },
-  keyNumbersTitle: {
+  blockTitle: {
     fontFamily: 'BNPPSans',
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    paddingBottom: 5,
     textAlign: 'center',
   }
 })
