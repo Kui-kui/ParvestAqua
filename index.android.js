@@ -34,7 +34,7 @@ export default class ParvestAqua extends Component {
   }
 
   componentDidMount() {
-    return fetch('https://api.is.bnpparibas-ip.com/push/fundsheet/IP_FR-FSE/FRA/FRE/18052')
+    return fetch('https://api.is.bnpparibas-ip.com/push/fundsheet/IP_FR-FSE/FRE/FRA/18052')
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
